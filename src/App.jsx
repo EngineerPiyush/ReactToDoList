@@ -5,6 +5,9 @@ function App() {
  const [toDoList, setToDoList] = useState([]);
   let saveToDoList = (event)=>{
     let todoname = event.target.todoname.value;
+    if(todoname.length==0){
+      alert('please enter an element in the box');
+    } else
     if(!toDoList.includes(todoname)){
       let finalToDoList = [...toDoList,todoname];
       setToDoList(finalToDoList);
